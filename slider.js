@@ -4,7 +4,7 @@ function qs(selectEl){
 }
 
 // select RGB inputs
-let red = qs('#red'), green = qs('#green'), blue = qs('#blue'); 
+let red = qs('#red'), green = qs('#green'), blue = qs('#blue');
 // selet num inputs
 let redNumVal = qs('#redNum'), greenNumVal = qs('#greenNum'), blueNumVal = qs('#blueNum');
 // select Color Display
@@ -25,10 +25,10 @@ colorSliders();
 
 // display colors
 function displayColors(){
-    colorDisplay.style.backgroundColor = `rgb(${red.value}, ${green.value}, ${blue.value})`;    
+    colorDisplay.style.backgroundColor = `rgb(${red.value}, ${green.value}, ${blue.value})`;
 }
 
-// initial color val numbers when DOM is loaded 
+// initial color val numbers when DOM is loaded
 function colorNumrVals(){
     redNumVal.value = red.value;
     greenNumVal.value = green.value;
@@ -56,8 +56,8 @@ function changeRangeNumVal(){
             alert('cannot enter numbers greater than 255');
             redNumVal.value = red.value;
         } else if(redNumVal.value < 0) {
-            alert('cannot enter numbers less than 0');  
-            redNumVal.value = red.value;            
+            alert('cannot enter numbers less than 0');
+            redNumVal.value = red.value;
         } else {
             red.value = redNumVal.value;
             initSliderColors();
@@ -70,8 +70,8 @@ function changeRangeNumVal(){
             alert('cannot enter numbers greater than 255');
             greenNumVal.value = green.value;
         } else if(greenNumVal.value < 0) {
-            alert('cannot enter numbers less than 0');  
-            greenNumVal.value = green.value;            
+            alert('cannot enter numbers less than 0');
+            greenNumVal.value = green.value;
         } else {
             green.value = greenNumVal.value;
             initSliderColors();

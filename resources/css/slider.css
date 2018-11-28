@@ -9,27 +9,10 @@ span:nth-child(3){
   color: #0000ff;
 }
 
-.wrap{
-  padding: 100px;
-  width: 100px;
-  margin: 0 auto;
-}
-
-/* color display */
-#color-display{
-  padding: 40px;
-  border-radius: 10px;
-}
-
-#color-display::before{
-  color: #ffffff;
-  text-shadow: 0 0 4px #333333;
-}
-
 /* labels */
 label{
   padding: 10px;
-  width: 50px;
+  width: 100px;
   text-align: center;
   color: #ffffff;
   margin: 4px;
@@ -71,7 +54,7 @@ input[type=number], label{
 .sliders input[type=range], input[type=range]::-webkit-slider-thumb{
   appearance: none;
   -webkit-appearance: none;
-} 
+}
 
 /* slider thumb */
 .sliders input[type=range]::-webkit-slider-thumb{

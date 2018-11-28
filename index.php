@@ -10,6 +10,7 @@
 
 <style>
 <?php include 'resources/css/style.css'; ?>
+<?php include 'resources/css/slider.css'; ?>
 </style>
 
 <!DOCTYPE html>
@@ -60,18 +61,37 @@
             <span id="round-num">Round: </span>
           </div>
           <div id="colors" class="center">
-            <div id="game-color" class="circle">
-
-            </div>
-            <div id="choice-color" class="circle">
-
-            </div>
+            <div id="game-color" class="circle"></div>
+						<div id="color-display" class="circle"></div>
           </div>
+
+					<div class="center">
+						<div class="sliders">
+							<div>
+									<label for="red">Red</label>
+									<input type="number" id="redNum">
+									<input value="180" type="range" min="0" max="255" id="red">
+							</div>
+							<div>
+									<label for="green">Green</label>
+									<input type="number" id="greenNum">
+									<input value="130" type="range" min="0" max="255" id="green">
+							</div>
+							<div>
+									<label for="blue">Blue</label>
+									<input type="number" id="blueNum">
+									<input value="160" type="range" min="0" max="255" id="blue">
+							</div>
+						</div>
+					</div>
+
+
 				</div>
         <div class="center">
           <input type="submit" name="choices" value="Got it!" />
         </div>
 			</form>
     </div>
+		<script src="slider.js"></script>
   </body>
 </html>

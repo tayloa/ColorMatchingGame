@@ -17,7 +17,6 @@ select:hover {
   padding: 10px;
 }
 .circle {
-  background: #f00;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -26,6 +25,6 @@ select:hover {
 #game-color {
   display: inline-block;
 }
-#choice-color {
+#color-display {
   display: inline-block;
 }
