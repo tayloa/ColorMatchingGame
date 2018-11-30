@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <title>jQuery UI Slider - Colorpicker</title>
+  <link rel="stylesheet" href="resources/css/slider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+</body>
+
+  <div class="color-slider-wrap">
+    <div class="color-wrap">
+      <div id="color-display"></div>
+    </div>
+
+    <div class="sliders">
+      <div>
+          <label for="red">Red</label>
+          <input type="number" id="redNum">
+          <input value="180" type="range" min="0" max="255" id="red">
+      </div>
+      <div>
+          <label for="green">Green</label>
+          <input type="number" id="greenNum">
+          <input value="130" type="range" min="0" max="255" id="green">
+      </div>
+      <div>
+          <label for="blue">Blue</label>
+          <input type="number" id="blueNum">
+          <input value="160" type="range" min="0" max="255" id="blue">
+      </div>
+    </div>
+  </div>
+	
+	<input value="150" type="range" min="0" max="255">
+
+  <script src="slider.js"></script>
+
+</body>
+</html>

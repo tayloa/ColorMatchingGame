@@ -41,6 +41,10 @@
           b: parseInt(result[3], 16)
       } : null;
     }
+		
+		function rgbToHex(rgb) {
+			var result = rgb['R'] + rgb['G'] + rgb['B'];
+		}
 
     function calcScore (expect,actual,difficult,timespent) {
       var hexE = "#"+expect['R']+expect['G']+expect['B'];
