@@ -118,3 +118,17 @@ function colorSliders(){
         colorNumrVals();
     });
 }
+
+// Score calculation for single round
+function calcScore (expect,actual,difficult,timespent) {
+    var val0 = (Math.abs(expect[0]-actual[0])/255)*100;
+    var val1 = (Math.abs(expect[1]-actual[1])/255)*100;
+    var val2 = (Math.abs(expect[2]-actual[2])/255)*100;
+    var avg_poff = (val0+val1+val2)/3;
+
+    var result = ((15-difficult-avg_poff)/(15-difficult))*(15000-timespent);
+    if (result<0) {
+        result = 0;
+    }
+    return result.toPrecision(2);
+}
