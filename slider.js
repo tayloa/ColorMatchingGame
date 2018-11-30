@@ -1,3 +1,8 @@
+// moduled querySelector
+function qs(selectEl){
+    return document.querySelector(selectEl);
+}
+
 // select RGB inputs
 let red = qs('#red'), green = qs('#green'), blue = qs('#blue');
 // selet num inputs
@@ -7,21 +12,16 @@ let colorDisplay = qs('#color-display');
 // select labels
 let redLbl = qs('label[for=red]'), greenLbl = qs('label[for=green]'), blueLbl = qs('label[for=blue]');
 
-$( document ).ready(function() {
-  // init display Colors
-  displayColors();
-  // init Color Vals
-  colorNumrVals();
-  // init ColorSliderVals
-  initSliderColors();
-  // init Change Range Val
-  changeRangeNumVal();
-  // init Colors controls
-  colorSliders();
-});
-function qs(selectEl){
-    return document.querySelectorAll(selectEl)[0];
-}
+// init display Colors
+displayColors();
+// init Color Vals
+colorNumrVals();
+// init ColorSliderVals
+initSliderColors();
+// init Change Range Val
+changeRangeNumVal();
+// init Colors controls
+colorSliders();
 
 // display colors
 function displayColors(){
@@ -97,24 +97,38 @@ function changeRangeNumVal(){
 
 // Color Sliders controls
 function colorSliders(){
-  red.addEventListener('input', () => {
-      displayColors();
-      initSliderColors();
-      changeRangeNumVal();
-      colorNumrVals();
-  });
+    red.addEventListener('input', () => {
+        displayColors();
+        initSliderColors();
+        changeRangeNumVal();
+        colorNumrVals();
+    });
 
-  green.addEventListener('input', () => {
-      displayColors();
-      initSliderColors();
-      changeRangeNumVal();
-      colorNumrVals();
-  });
+    green.addEventListener('input', () => {
+        displayColors();
+        initSliderColors();
+        changeRangeNumVal();
+        colorNumrVals();
+    });
 
-  blue.addEventListener('input', () => {
-      displayColors();
-      initSliderColors();
-      changeRangeNumVal();
-      colorNumrVals();
-  });
+    blue.addEventListener('input', () => {
+        displayColors();
+        initSliderColors();
+        changeRangeNumVal();
+        colorNumrVals();
+    });
+}
+
+// Score calculation for single round
+function calcScore (expect,actual,difficult,timespent) {
+    var val0 = (Math.abs(expect[0]-actual[0])/255)*100;
+    var val1 = (Math.abs(expect[1]-actual[1])/255)*100;
+    var val2 = (Math.abs(expect[2]-actual[2])/255)*100;
+    var avg_poff = (val0+val1+val2)/3;
+
+    var result = ((15-difficult-avg_poff)/(15-difficult))*(15000-timespent);
+    if (result<0) {
+        result = 0;
+    }
+    return result.toPrecision(2);
 }
