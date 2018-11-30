@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hexxed!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+  	<link rel="stylesheet" type="text/css" href="resources/css/slider.css">
+  </head>
+  <body>
+    <h1>Hexxed!</h1>
+    <h2>A Color Matching Game</h2>
+    
+    <div id="main-game">
+      <div id="game-start">
+        <p>
+          <label id="name-label" for="name">Name: </label>
+          <input id="name" type="text" placeholder="Enter name here" />
+        </p>
+        <p>
+          <label id="difficulty-label" for="difficulty">Difficulty: </label> 
+          <select id="difficulty" name="difficulty"> 
+            <option value=1>1</option> 
+            <option value=2>2</option> 
+            <option value=3>3</option> 
+            <option value=4>4</option> 
+            <option value=5 selected>5</option> 
+            <option value=6>6</option> 
+            <option value=7>7</option> 
+            <option value=8>8</option> 
+            <option value=9>9</option> 
+            <option value=10>10</option> 
+          </select>
+        </p>
+        <p>
+          <label id="round-label" for="round">Rounds: </label> 
+          <input id="round" type="number" value="10" />
+        </p>
+        <button id="start_game">Start Game</button>
+      </div>
+      <div id="game-info"> 
+        <p><strong>Player:</strong> <span id="player" /></p>
+        <p><strong>Round:</strong> <span id="round-num" /></p> 
+        <p><strong>Total Score:</strong> <span id="score" /></p> 
+        <p><strong>Last Round's Score:</strong> <span id="lastScore" /></p> 
+      </div>
+      <div id="colors" class="center"> 
+        <div>
+          <div class="color-label">Expected</div>
+          <div class="color-label">Actual</div>
+        </div>
+        <div id="game-color" class="circle"></div> 
+        <div id="color-display" class="circle"></div> 
+        <div>
+          <div id="expected-color" class="color-label"></div>
+          <div id="actual-color" class="color-label"></div>
+        </div>
+      </div>
+      <div class="sliders"> 
+        <div> 
+            <label class="sliderLabel" for="red">Red</label> 
+            <input type="number" id="redNum" value="255"> 
+            <input value="255" type="range" min="0" max="255" id="red"> 
+        </div> 
+        <div> 
+            <label class="sliderLabel" for="green">Green</label> 
+            <input type="number" id="greenNum" value="255"> 
+            <input value="255" type="range" min="0" max="255" id="green"> 
+        </div> 
+        <div> 
+            <label class="sliderLabel" for="blue">Blue</label> 
+            <input type="number" id="blueNum" value="255"> 
+            <input value="255" type="range" min="0" max="255" id="blue"> 
+        </div> 
+      </div>
+      <button id="submit">Got it</button> 
+    </div>
+  </body>
+</html>
