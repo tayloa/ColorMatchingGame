@@ -1,0 +1,23 @@
+
+
+#circle1 {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	display: inline-block;
+	background-color: pink;
+	border-style: solid;
+	border-color: black;
+
+}
+
+#circle2 {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	display: inline-block;
+	background-color: #000;
+	border-style: solid;
+	border-color: black;
+
+}
