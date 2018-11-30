@@ -1,8 +1,3 @@
-// moduled querySelector
-function qs(selectEl){
-    return document.querySelector(selectEl);
-}
-
 // select RGB inputs
 let red = qs('#red'), green = qs('#green'), blue = qs('#blue');
 // selet num inputs
@@ -12,16 +7,21 @@ let colorDisplay = qs('#color-display');
 // select labels
 let redLbl = qs('label[for=red]'), greenLbl = qs('label[for=green]'), blueLbl = qs('label[for=blue]');
 
-// init display Colors
-displayColors();
-// init Color Vals
-colorNumrVals();
-// init ColorSliderVals
-initSliderColors();
-// init Change Range Val
-changeRangeNumVal();
-// init Colors controls
-colorSliders();
+$( document ).ready(function() {
+  // init display Colors
+  displayColors();
+  // init Color Vals
+  colorNumrVals();
+  // init ColorSliderVals
+  initSliderColors();
+  // init Change Range Val
+  changeRangeNumVal();
+  // init Colors controls
+  colorSliders();
+});
+function qs(selectEl){
+    return document.querySelectorAll(selectEl)[0];
+}
 
 // display colors
 function displayColors(){
@@ -97,24 +97,24 @@ function changeRangeNumVal(){
 
 // Color Sliders controls
 function colorSliders(){
-    red.addEventListener('input', () => {
-        displayColors();
-        initSliderColors();
-        changeRangeNumVal();
-        colorNumrVals();
-    });
+  red.addEventListener('input', () => {
+      displayColors();
+      initSliderColors();
+      changeRangeNumVal();
+      colorNumrVals();
+  });
 
-    green.addEventListener('input', () => {
-        displayColors();
-        initSliderColors();
-        changeRangeNumVal();
-        colorNumrVals();
-    });
+  green.addEventListener('input', () => {
+      displayColors();
+      initSliderColors();
+      changeRangeNumVal();
+      colorNumrVals();
+  });
 
-    blue.addEventListener('input', () => {
-        displayColors();
-        initSliderColors();
-        changeRangeNumVal();
-        colorNumrVals();
-    });
+  blue.addEventListener('input', () => {
+      displayColors();
+      initSliderColors();
+      changeRangeNumVal();
+      colorNumrVals();
+  });
 }
